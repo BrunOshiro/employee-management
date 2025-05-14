@@ -1,0 +1,28 @@
+server:
+  port: 10001
+spring:
+  application:
+    name: employee-management
+  config:
+    activate:
+      on-profile:
+        - local
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    init:
+      mode: always
+    show-sql: true
+
+  datasource:
+    initialization-mode: always
+    url: jdbc:postgresql://localhost:5433/employee_management
+    username: postgres
+    password: admin123
+    hikari:
+      pool-name: hikari
+    sql:
+        init:
+            mode: always
+            schema-locations: classpath:schema.sql
