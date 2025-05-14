@@ -42,6 +42,7 @@ public class EmployeeEntity {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
+    // Default constructor for JPA
     public EmployeeEntity() {
     }
 }
