@@ -7,7 +7,6 @@ import jakarta.persistence.Table;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.time.LocalDateTime;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,7 +18,6 @@ import org.hibernate.annotations.UpdateTimestamp;
 @Entity
 @Builder
 @Table(name = "employee")
-@AllArgsConstructor
 public class EmployeeEntity {
     @Id
     @Column(name = "id", unique = true, updatable = false)
@@ -42,7 +40,21 @@ public class EmployeeEntity {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    // Default constructor for JPA
     public EmployeeEntity() {
+    }
+
+    public EmployeeEntity(
+            BigInteger id,
+            String name,
+            String lastName,
+            BigDecimal salary,
+            LocalDateTime createdAt,
+            LocalDateTime updatedAt) {
+        this.id = id;
+        this.name = name;
+        this.lastName = lastName;
+        this.salary = salary;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 }
