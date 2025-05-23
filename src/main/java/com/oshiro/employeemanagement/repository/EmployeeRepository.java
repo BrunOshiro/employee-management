@@ -1,4 +1,4 @@
-package com.oshiro.employee_management.repository;
+package com.oshiro.employeemanagement.repository;
 
 import java.math.BigInteger;
 import java.util.Optional;

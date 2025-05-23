@@ -1,4 +1,4 @@
-package com.oshiro.employee_management.repository;
+package com.oshiro.employeemanagement.repository;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -16,7 +16,6 @@ import org.hibernate.annotations.UpdateTimestamp;
 @Getter
 @Setter
 @Entity
-@Builder
 @Table(name = "employee")
 public class EmployeeEntity {
     @Id
@@ -43,6 +42,7 @@ public class EmployeeEntity {
     public EmployeeEntity() {
     }
 
+    @Builder(toBuilder = true)
     public EmployeeEntity(
             BigInteger id,
             String name,

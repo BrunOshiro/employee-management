@@ -1,4 +1,4 @@
-package com.oshiro.employee_management;
+package com.oshiro.employeemanagement;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
